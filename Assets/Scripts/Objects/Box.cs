@@ -80,7 +80,5 @@ public class Box : Carriable
         memento.transform.localPosition = Vector3.zero;
         memento.transform.localRotation = Quaternion.identity;
         memento.IsKinematic = true;
-
-        PlayMusicPreview();
     }
 }
