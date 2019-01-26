@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf3f75ff4cae0cb4cbbdf72db8a930ad, type: 3}
-  m_Name: Nothing
+  m_Name: Nothing 2
   m_EditorClassIdentifier: 
   _conditions: []
-  _endingText: "I guess I don\u2019t remember much about my dad. I was sure there
-    would be some stuff here to jog my memory but\u2026 oh well. "
+  _endingText: "Meh. Nothing interesting, just a bunch of random junk. I may have
+    missed something but\u2026 nah... "
   _endingAudio: {fileID: 0}
   _endingSprite: {fileID: 0}

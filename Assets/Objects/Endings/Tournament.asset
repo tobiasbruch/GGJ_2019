@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf3f75ff4cae0cb4cbbdf72db8a930ad, type: 3}
-  m_Name: StayingInside
+  m_Name: Tournament
   m_EditorClassIdentifier: 
   _conditions:
-  - {fileID: 11400000, guid: 03ced5926dbed4549a2bf0b8e835f94b, type: 2}
-  - {fileID: 11400000, guid: fcc37ad587516b94c98ebf062722bcc3, type: 2}
+  - {fileID: 11400000, guid: 11678b981d03d0846b3695475fea2a0d, type: 2}
+  - {fileID: 11400000, guid: 121d4f634c1044646b8c1f71052bec34, type: 2}
   - {fileID: 11400000, guid: 1531c48a7eeb65d46a15d5a294649b8d, type: 2}
-  _endingText: 'Dad was always obsessed with the sport. First time we went outside
-    I was fine, but quickly after I was gasping for air. He rushed me to the hospital
-    and I quickly got my inhaler. Pretty much ruined him. All he wanted was to play
-    with his kid. '
+  _endingText: "He was so happy we got that thing. He finally had a trophy for his
+    little boy! I was never competitive and I don\u2019t think he was either but...
+    Yeah it was just about playing, doing something together. I can still remember
+    the excitement when he saw the ad in the paper. I guess we did find something. "
   _endingAudio: {fileID: 0}
   _endingSprite: {fileID: 0}
