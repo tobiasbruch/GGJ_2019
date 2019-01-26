@@ -11,12 +11,12 @@ public class Interactable : MonoBehaviour
     [SerializeField]
     public UnityAction _onCarryClicked = delegate { };
 
-    public void OnCarryClick()
+    public virtual void OnCarryClick()
     {
         _onCarryClicked.Invoke();
     }
 
-    public void OnInteractClick()
+    public virtual void OnInteractClick()
     {
         _onInteractClicked.Invoke();
     }

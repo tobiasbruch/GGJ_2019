@@ -24,6 +24,7 @@ public class FirstPersonRaycaster : MonoBehaviour
     }
 
     private Interactable _currentInteractable;
+    public Interactable CurrentInteractable { get { return _currentInteractable; } }
 
     public event Action<Interactable> EventPointerEnterInteractable = delegate { };
     public event Action<Interactable> EventPointerExitInteractable = delegate { };
@@ -63,7 +64,7 @@ public class FirstPersonRaycaster : MonoBehaviour
         LayerMask layerMask = LayerMask.GetMask("Interactable");
         if(Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
         {
-            var interactable = hit.collider.GetComponent<Interactable>();
+            var interactable = hit.rigidbody != null ? hit.rigidbody.GetComponent<Interactable>() : hit.collider.GetComponent<Interactable>();
             if (interactable && Vector3.Distance(interactable.transform.position,transform.position) <= _interactionRange)
             {
                 if (interactable != _currentInteractable)
