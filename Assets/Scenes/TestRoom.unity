@@ -3067,25 +3067,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1672858485, guid: 1ec17d4e15146ae419f35a129b52faba, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 1911405017, guid: 1ec17d4e15146ae419f35a129b52faba, type: 3}
+      propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 557260973, guid: 1ec17d4e15146ae419f35a129b52faba, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 545147336, guid: 1ec17d4e15146ae419f35a129b52faba, type: 3}
-      propertyPath: m_Alpha
+    - target: {fileID: 1911405017, guid: 1ec17d4e15146ae419f35a129b52faba, type: 3}
+      propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 678606921, guid: 1ec17d4e15146ae419f35a129b52faba, type: 3}
-      propertyPath: m_fontColor.a
+    - target: {fileID: 140512182, guid: 1ec17d4e15146ae419f35a129b52faba, type: 3}
+      propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 678606921, guid: 1ec17d4e15146ae419f35a129b52faba, type: 3}
-      propertyPath: m_text
-      value: 
+    - target: {fileID: 140512182, guid: 1ec17d4e15146ae419f35a129b52faba, type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ec17d4e15146ae419f35a129b52faba, type: 3}
