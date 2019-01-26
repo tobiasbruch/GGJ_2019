@@ -74,6 +74,15 @@ public class Carry : MonoBehaviour
     {
         _currentlyCarried = carriable;
         carriable.transform.SetParent(_carrySlot);
+
+        float height = 0;
+        foreach (var mesh in _carrySlot.GetComponentsInChildren<MeshFilter>())
+        {
+            height = Mathf.Max(height, (mesh.mesh.bounds.center.y + mesh.mesh.bounds.extents.y) * mesh.transform.lossyScale.y * 2);
+        }
+        Vector3 pos = _carrySlot.localPosition;
+        pos.y = -.25f - height;
+        _carrySlot.localPosition = pos;
         _currentlyCarried.transform.localPosition = Vector3.zero;
         _currentlyCarried.transform.localRotation = Quaternion.identity;
         _currentlyCarried.IsKinematic = true;
