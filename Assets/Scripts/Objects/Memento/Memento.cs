@@ -54,11 +54,11 @@ public class Memento : Carriable
 
     IEnumerator FadeOut()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         WaitForEndOfFrame wait = new WaitForEndOfFrame();
         while(_audioSource.volume > 0)
         {
-            _audioSource.volume -= Time.deltaTime * .5f;
+            _audioSource.volume -= Time.deltaTime * .75f;
             yield return wait;
         }
         _audioSource.volume = 1;
