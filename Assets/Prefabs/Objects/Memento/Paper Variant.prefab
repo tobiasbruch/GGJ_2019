@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6604377381285380554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6275940821283444373, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_Name
+      value: Paper
+      objectReference: {fileID: 0}
+    - target: {fileID: 833373050, guid: 31293317469251748bd463777c2b2391, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 90ff11b81ddd14f40800dddecb510e56, type: 3}
+    - target: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.136222
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275940821283444374, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 6604377381577654960}
+    - target: {fileID: 6275940821283444374, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: _mementoObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 121d4f634c1044646b8c1f71052bec34,
+        type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31293317469251748bd463777c2b2391, type: 3}
+--- !u!82 &6604377381577654960 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 833373050, guid: 31293317469251748bd463777c2b2391,
+    type: 3}
+  m_PrefabInstance: {fileID: 6604377381285380554}
+  m_PrefabAsset: {fileID: 0}
