@@ -59,6 +59,9 @@ public class ExitDoor : Interactable
                 return false;
             }
         }
+        if (mementos.Count > 0)
+            return false;
+
         return true;
     }
 }
