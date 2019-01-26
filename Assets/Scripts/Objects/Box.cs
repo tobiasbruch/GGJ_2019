@@ -34,16 +34,35 @@ public class Box : Carriable
         base.Start();
     }
 
+    protected override void OnIsCarriedChanged()
+    {
+        base.OnIsCarriedChanged();
+        if (IsCarried)
+        {
+            foreach (var item in Mementos)
+            {
+                item.Play();
+            }
+        }
+        else
+        {
+            foreach (var item in Mementos)
+            {
+                item.StopPlaying();
+            }
+        }
+    }
     public override void OnInteractClick()
     {
         base.OnInteractClick();
-        PlayMusicCues();
+        PlayMusicPreview();
     }
-    private void PlayMusicCues()
+
+    private void PlayMusicPreview()
     {
         foreach (var item in Mementos)
         {
-            item.PlayCue();
+            item.PlayCuePreview();
         }
     }
 
@@ -62,6 +81,6 @@ public class Box : Carriable
         memento.transform.localRotation = Quaternion.identity;
         memento.IsKinematic = true;
 
-        PlayMusicCues();
+        PlayMusicPreview();
     }
 }
