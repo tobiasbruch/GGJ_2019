@@ -21,6 +21,13 @@ public class Box : Carriable
         }
     }
 
+    public Memento[] Mementos
+    {
+        get
+        {
+            return GetComponentsInChildren<Memento>();
+        }
+    }
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -34,7 +41,7 @@ public class Box : Carriable
     }
     private void PlayMusicCues()
     {
-        foreach (var item in GetComponentsInChildren<Memento>())
+        foreach (var item in Mementos)
         {
             item.PlayCue();
         }
