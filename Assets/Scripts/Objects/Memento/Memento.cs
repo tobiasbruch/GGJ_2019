@@ -10,6 +10,8 @@ public class Memento : Carriable
     private MementoObject _mementoObject;
     public MementoObject MementoObject { get { return _mementoObject; } }
 
+    private Coroutine _fadeOutRoutine;
+
     protected override void Start()
     {
         base.Start();
@@ -18,7 +20,7 @@ public class Memento : Carriable
     public override void OnInteractClick()
     {
         base.OnInteractClick();
-        PlayCue();
+        PlayCuePreview();
     }
 
     protected override void OnIsCarriedChanged()
@@ -27,16 +29,64 @@ public class Memento : Carriable
 
         if (IsCarried)
         {
-            PlayCue();
+            Play();
+        } else
+        {
+            StopPlaying();
         }
     }
 
-    public void PlayCue()
+    public void PlayCuePreview()
     {
+        if (_fadeOutRoutine != null)
+            StopCoroutine(_fadeOutRoutine);
+        _audioSource.volume = 1;
+
         if (_audioSource.isPlaying)
         {
             _audioSource.Stop();
         }
-        _audioSource.PlayOneShot(_mementoObject._audioCue);
+        _audioSource.Play();
+        
+
+        _fadeOutRoutine = StartCoroutine(FadeOut());
+    }
+
+    IEnumerator FadeOut()
+    {
+        yield return new WaitForSeconds(2f);
+        WaitForEndOfFrame wait = new WaitForEndOfFrame();
+        while(_audioSource.volume > 0)
+        {
+            _audioSource.volume -= Time.deltaTime * .5f;
+            yield return wait;
+        }
+        _audioSource.volume = 1;
+        _audioSource.Stop();
+    }
+
+    public void Play()
+    {
+        if (_fadeOutRoutine != null)
+            StopCoroutine(_fadeOutRoutine);
+        _audioSource.volume = 1;
+
+        if (_audioSource.isPlaying)
+        {
+            _audioSource.Stop();
+        }
+        _audioSource.Play();
+    }
+
+    public void StopPlaying()
+    {
+        if (_fadeOutRoutine != null)
+            StopCoroutine(_fadeOutRoutine);
+        _audioSource.volume = 1;
+
+        if (_audioSource.isPlaying)
+        {
+            _audioSource.Stop();
+        }
     }
 }
