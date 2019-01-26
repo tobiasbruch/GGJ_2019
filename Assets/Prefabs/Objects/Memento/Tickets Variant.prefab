@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tickets
       objectReference: {fileID: 0}
+    - target: {fileID: 833373050, guid: 31293317469251748bd463777c2b2391, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 88d54b3a38680c7409e8b24ec4fa5490, type: 3}
     - target: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -69,32 +73,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6275940821283444374, guid: 31293317469251748bd463777c2b2391,
         type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 3673696342396327179}
+    - target: {fileID: 6275940821283444374, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
       propertyPath: _mementoObject
       value: 
       objectReference: {fileID: 11400000, guid: e1b98a953b8ec6f4ab3766eab05e56f3,
         type: 2}
-    - target: {fileID: 6275940821283444374, guid: 31293317469251748bd463777c2b2391,
-        type: 3}
-      propertyPath: _audioSource
-      value: 
-      objectReference: {fileID: 3673696342396327179}
     - target: {fileID: 6275940819451720001, guid: 31293317469251748bd463777c2b2391,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 25ec8a22fac11224c951d46b1132b8f6, type: 2}
-    - target: {fileID: 833373050, guid: 31293317469251748bd463777c2b2391, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 9db9336e9f17c9744847c5fe94c1650f, type: 3}
-    - target: {fileID: 833373050, guid: 31293317469251748bd463777c2b2391, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 833373050, guid: 31293317469251748bd463777c2b2391, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: acfe42b8543f5b4479d095671a1e480b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31293317469251748bd463777c2b2391, type: 3}
 --- !u!82 &3673696342396327179 stripped

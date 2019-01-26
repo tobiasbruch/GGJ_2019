@@ -6,6 +6,8 @@ using UnityEngine;
 public class ExitDoor : Interactable
 {
     [SerializeField]
+    private Outro _outro;
+    [SerializeField]
     private EndingObject[] _endings;
     [SerializeField]
     private EndingObject[] _badEndings;
@@ -38,7 +40,7 @@ public class ExitDoor : Interactable
 
     private void PlayEnding(EndingObject ending)
     {
-        Debug.Log(ending._endingText);
+        _outro.Ending = ending;
     }
 
     private bool EndingConditionsMet(EndingObject ending)
