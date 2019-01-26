@@ -6,6 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class FirstPersonRaycaster : MonoBehaviour
 {
+    [SerializeField]
+    private float _interactionRange;
+
     public static FirstPersonRaycaster Instance { get; private set; }
 
     private void Awake()
@@ -57,20 +60,15 @@ public class FirstPersonRaycaster : MonoBehaviour
     {
         RaycastHit hit = new RaycastHit();
         Ray ray = new Ray(transform.position, transform.forward);
-        if(Physics.Raycast(ray, out hit))
+        LayerMask layerMask = LayerMask.GetMask("Interactable");
+        if(Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
         {
             var interactable = hit.collider.GetComponent<Interactable>();
-            if (interactable)
+            if (interactable && Vector3.Distance(interactable.transform.position,transform.position) <= _interactionRange)
             {
                 if (interactable != _currentInteractable)
                 {
-                    if(_currentInteractable != null)
-                    {
-
-                        EventPointerExitInteractable(_currentInteractable);
-                        _currentInteractable.OnPointerExit();
-                        _currentInteractable = null;
-                    }
+                    OnPointerExitInteractable();
 
                     _currentInteractable = interactable;
                     EventPointerEnterInteractable(_currentInteractable);
@@ -78,13 +76,21 @@ public class FirstPersonRaycaster : MonoBehaviour
                 }
             } else
             {
-                if (_currentInteractable != null)
-                {
-                    EventPointerExitInteractable(_currentInteractable);
-                    _currentInteractable.OnPointerExit();
-                    _currentInteractable = null;
-                }
+                OnPointerExitInteractable();
             }
+        } else
+        {
+            OnPointerExitInteractable();
+        }
+    }
+
+    private void OnPointerExitInteractable()
+    {
+        if (_currentInteractable != null)
+        {
+            EventPointerExitInteractable(_currentInteractable);
+            _currentInteractable.OnPointerExit();
+            _currentInteractable = null;
         }
     }
 }
