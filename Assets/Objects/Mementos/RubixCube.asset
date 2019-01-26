@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c6f2a2d074f4254aada88021ee8dc4a, type: 3}
   m_Name: RubixCube
   m_EditorClassIdentifier: 
-  _audioCue: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
+  _audioCue: {fileID: 8300000, guid: 738927f5fc702664a9b6196e71faec86, type: 3}
