@@ -24,7 +24,7 @@ public class Carry : MonoBehaviour
 
     private void ProcessInput()
     {
-        if (Input.GetButtonDown("Carry") && _currentlyCarried)
+        if (!FirstPersonRaycaster.Instance.CurrentInteractable && Input.GetButtonDown("Carry") && _currentlyCarried)
         {
             DropObject();
         }
@@ -33,13 +33,26 @@ public class Carry : MonoBehaviour
 
     private void OnCarryClicked(Interactable interactable)
     {
-        Carriable carriable = interactable as Carriable;
-
-        if(carriable != null)
+        Box box = interactable as Box;
+        if (box != null && box.HasSpaceLeft && _currentlyCarried != null)
         {
-            if(_currentlyCarried == null)
+            Memento memento = _currentlyCarried as Memento;
+            if (memento)
             {
-                CarryObject(carriable);
+                DropObject();
+                box.AddMemento(memento);
+            }
+        }
+        else
+        {
+            Carriable carriable = interactable as Carriable;
+
+            if (carriable != null)
+            {
+                if (_currentlyCarried == null)
+                {
+                    CarryObject(carriable);
+                }
             }
         }
     }
@@ -47,12 +60,13 @@ public class Carry : MonoBehaviour
     private void DropObject()
     {
         _currentlyCarried.transform.SetParent(null);
+        _currentlyCarried.IsKinematic = false;
         Rigidbody rigidbody = _currentlyCarried.GetComponent<Rigidbody>();
         if (rigidbody)
         {
-            rigidbody.isKinematic = false;
             rigidbody.AddForce(_carrySlot.forward * _dropForce, ForceMode.Impulse);
         }
+        _currentlyCarried.IsCarried = false;
         _currentlyCarried = null;
     }
 
@@ -62,10 +76,7 @@ public class Carry : MonoBehaviour
         carriable.transform.SetParent(_carrySlot);
         _currentlyCarried.transform.localPosition = Vector3.zero;
         _currentlyCarried.transform.localRotation = Quaternion.identity;
-        Rigidbody rigidbody = _currentlyCarried.GetComponent<Rigidbody>();
-        if (rigidbody)
-        {
-            rigidbody.isKinematic = true;
-        }
+        _currentlyCarried.IsKinematic = true;
+        _currentlyCarried.IsCarried = true;
     }
 }
