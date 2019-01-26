@@ -84,6 +84,10 @@ public class Carry : MonoBehaviour
         pos.y = -.25f - height;
         _carrySlot.localPosition = pos;
         _currentlyCarried.transform.localPosition = Vector3.zero;
+        if(_currentlyCarried is Memento)
+        {
+            _currentlyCarried.transform.localPosition = new Vector3(.33f, 0, 0);
+        }
         _currentlyCarried.transform.localRotation = Quaternion.identity;
         _currentlyCarried.IsKinematic = true;
         _currentlyCarried.IsCarried = true;

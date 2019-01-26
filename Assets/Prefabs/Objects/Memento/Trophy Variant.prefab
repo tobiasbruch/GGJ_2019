@@ -19,7 +19,7 @@ PrefabInstance:
     - target: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.136222
+      value: 3.636
       objectReference: {fileID: 0}
     - target: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
         type: 3}
@@ -76,6 +76,12 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 6466570050786366203}
+    - target: {fileID: 6275940821283444374, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: _mementoObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 11678b981d03d0846b3695475fea2a0d,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31293317469251748bd463777c2b2391, type: 3}
 --- !u!82 &6466570050786366203 stripped

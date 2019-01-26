@@ -19,12 +19,13 @@ public class ExitDoor : Interactable
         base.OnInteractClick();
         if (!_box.IsCarried)
         {
-            Debug.Log("You need to bring the box");
+            Speech.Instance.Text = "I should grab the box before I leave";
         }
-        else if (_box.HasSpaceLeft)
+        else if (_box.Mementos.Length == 0)
         {
-            Debug.Log("You need to collect more items");
-        } else
+            Speech.Instance.Text = "I should pack the box before I leave";
+        }
+        else
         {
             foreach (var ending in _endings)
             {
@@ -58,6 +59,9 @@ public class ExitDoor : Interactable
                 return false;
             }
         }
+        if (mementos.Count > 0)
+            return false;
+
         return true;
     }
 }
