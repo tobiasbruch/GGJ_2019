@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -179.989
       objectReference: {fileID: 0}
+    - target: {fileID: 7809746784806771496, guid: bb6fd65b8cb8ec743997bdd75ed9f239,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8a63a8630c963e24ea647f154433a206, type: 3}
     - target: {fileID: 1499104487, guid: bb6fd65b8cb8ec743997bdd75ed9f239, type: 3}
       propertyPath: Collider
       value: 
@@ -83,8 +88,18 @@ PrefabInstance:
       propertyPath: Openable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1499104487, guid: bb6fd65b8cb8ec743997bdd75ed9f239, type: 3}
+      propertyPath: _outlineObject
+      value: 
+      objectReference: {fileID: 3847401014340762222}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb6fd65b8cb8ec743997bdd75ed9f239, type: 3}
+--- !u!1 &3847401014340762222 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7954231093562305505, guid: bb6fd65b8cb8ec743997bdd75ed9f239,
+    type: 3}
+  m_PrefabInstance: {fileID: 6559402559225188751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &6559402559636040687 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 679688800, guid: bb6fd65b8cb8ec743997bdd75ed9f239,
