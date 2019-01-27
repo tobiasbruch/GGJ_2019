@@ -39,6 +39,7 @@ public class Box : Carriable
         base.OnIsCarriedChanged();
         if (IsCarried)
         {
+            AudioManagerStuff.i.StopAllMementosAudio();
             foreach (var item in Mementos)
             {
                 item.Play();
