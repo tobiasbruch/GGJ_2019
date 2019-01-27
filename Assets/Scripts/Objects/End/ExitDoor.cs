@@ -65,10 +65,7 @@ public class ExitDoor : Interactable
             _box.Mementos[0].AudioSource.time = time;
             _box.Mementos[0].AudioSource.Play();
         }
-        foreach (var item in _box.Mementos)
-        {
-            item.AudioSource.DOFade(.25f, .5f);
-        }
+        StartCoroutine(FadeAudio(ending));
 
         _outro.Ending = ending;
     }
