@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Memento : Carriable
 {
+    public AudioSource AudioSource { get { return _audioSource; } }
     [SerializeField]
     private AudioSource _audioSource;
     [SerializeField]

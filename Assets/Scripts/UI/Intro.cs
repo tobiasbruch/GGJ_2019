@@ -14,6 +14,8 @@ public class Intro : MonoBehaviour
     private AudioClip _backgroundNoises;
     [SerializeField]
     private AudioClip _narration;
+    [SerializeField]
+    private AudioSource _ambientMusic;
 
     private Animator _animator;
 
@@ -55,13 +57,16 @@ public class Intro : MonoBehaviour
             _audioSource.clip = _backgroundNoises;
             _audioSource.loop = false;
             _audioSource.Play();
-            yield return new WaitWhile(()=> { return _audioSource.isPlaying || !Input.GetMouseButtonDown(0); });
+            yield return new WaitWhile(()=> { return _audioSource.isPlaying && !Input.GetMouseButtonDown(0); });
         }  else
         {
             yield return new WaitForSeconds(.5f);
         }
+        _audioSource.Stop();
+        _audioSource.clip = null;
 
         _animator.SetInteger("IntroState", 2);
+        _ambientMusic.Play();
         yield return wait;
 
         if (_narration)
