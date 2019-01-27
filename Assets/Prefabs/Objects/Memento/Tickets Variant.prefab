@@ -85,17 +85,17 @@ PrefabInstance:
     - target: {fileID: 6275940821283444377, guid: 31293317469251748bd463777c2b2391,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6275940819451720063, guid: 31293317469251748bd463777c2b2391,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.42
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6275940819451720063, guid: 31293317469251748bd463777c2b2391,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.05
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6275940819451720063, guid: 31293317469251748bd463777c2b2391,
         type: 3}
@@ -112,6 +112,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: acfe42b8543f5b4479d095671a1e480b, type: 2}
+    - target: {fileID: 7756050506838069762, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31293317469251748bd463777c2b2391, type: 3}
 --- !u!4 &7341722500192665830 stripped
@@ -155,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: b164422a78573bd42a29a2a00f8f84ea, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: b164422a78573bd42a29a2a00f8f84ea, type: 3}
       propertyPath: m_LocalRotation.z
@@ -163,7 +168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: b164422a78573bd42a29a2a00f8f84ea, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: b164422a78573bd42a29a2a00f8f84ea, type: 3}
       propertyPath: m_RootOrder
@@ -175,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: b164422a78573bd42a29a2a00f8f84ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: b164422a78573bd42a29a2a00f8f84ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
