@@ -20,5 +20,5 @@ MonoBehaviour:
     I was fine, but quickly after I was gasping for air. He rushed me to the hospital
     and I quickly got my inhaler. Pretty much ruined him. All he wanted was to play
     with his kid. '
-  _endingAudio: {fileID: 0}
+  _endingAudio: {fileID: 8300000, guid: 425d733dd41a9d5478e7dafd1f55aa5f, type: 3}
   _endingSprite: {fileID: 0}
