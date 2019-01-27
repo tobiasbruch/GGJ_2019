@@ -75,12 +75,12 @@ public class ExitDoor : Interactable
         if (ending._endingVO) {
             foreach (var item in _box.Mementos)
             {
-                item.AudioSource.DOFade(.15f, .5f);
+                item.AudioSource.DOFade(.1f, .5f);
             }
             yield return new WaitForSeconds(ending._endingVO.length);
             foreach (var item in _box.Mementos)
             {
-                item.AudioSource.DOFade(1, .5f);
+                item.AudioSource.DOFade(1, .75f);
             }
         }
 
