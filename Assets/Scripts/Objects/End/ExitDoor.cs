@@ -47,6 +47,20 @@ public class ExitDoor : Interactable
 
     private void PlayEnding(EndingObject ending)
     {
+        if(ending._endingAudio != null)
+        {
+            float time = _box.Mementos[0].AudioSource.time;
+            foreach (var item in _box.Mementos)
+            {
+                item.StopPlaying();
+            }
+            _box.Mementos[0].AudioSource.clip = ending._endingAudio;
+            _box.Mementos[0].AudioSource.time = time;
+            _box.Mementos[0].AudioSource.Play();
+
+        }
+        
+
         _outro.Ending = ending;
     }
 
