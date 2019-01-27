@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 400000}
   - component: {fileID: 518790406620658029}
   - component: {fileID: 7713493825715923438}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: torchere_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,7 +439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3038493517105811827
 Transform:
   m_ObjectHideFlags: 0
@@ -448,7 +448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6751641918582203911}
   m_LocalRotation: {x: 0.23000486, y: -0.96201694, z: -0.07550511, w: 0.12617563}
-  m_LocalPosition: {x: -0.14213142, y: -0.015902754, z: 1.26662}
+  m_LocalPosition: {x: -0.134, y: -0.02, z: 1.284}
   m_LocalScale: {x: 0.48960987, y: 0.48960966, z: 0.48960978}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -467,7 +467,7 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
-  m_SpotAngle: 55
+  m_SpotAngle: 121
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
