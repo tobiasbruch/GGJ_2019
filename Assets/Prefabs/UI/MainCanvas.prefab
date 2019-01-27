@@ -3605,6 +3605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3498006036237071006}
   - component: {fileID: 1023814705532384885}
+  - component: {fileID: 3344493603110354946}
   m_Layer: 9
   m_Name: AmbientTrack
   m_TagString: Untagged
@@ -3722,6 +3723,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3344493603110354946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089608307090769194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd8311da8c937449b891d888247d04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 1023814705532384885}
 --- !u!1 &2933409333166221032
 GameObject:
   m_ObjectHideFlags: 0
@@ -4365,15 +4379,15 @@ PrefabInstance:
       objectReference: {fileID: 6883466670830712207}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a51423b30fd261438b695479a9ff742, type: 3}
---- !u!224 &6883466670830712208 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5179966551774407960, guid: 0a51423b30fd261438b695479a9ff742,
-    type: 3}
-  m_PrefabInstance: {fileID: 1757543317298600072}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &6883466670830712207 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5179966551774407943, guid: 0a51423b30fd261438b695479a9ff742,
+    type: 3}
+  m_PrefabInstance: {fileID: 1757543317298600072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &6883466670830712208 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5179966551774407960, guid: 0a51423b30fd261438b695479a9ff742,
     type: 3}
   m_PrefabInstance: {fileID: 1757543317298600072}
   m_PrefabAsset: {fileID: 0}
