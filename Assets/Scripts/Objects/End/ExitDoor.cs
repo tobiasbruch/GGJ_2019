@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using DG.Tweening;
 
 public class ExitDoor : Interactable
 {
@@ -13,6 +14,10 @@ public class ExitDoor : Interactable
     private EndingObject[] _badEndings;
     [SerializeField]
     private Box _box;
+    [SerializeField]
+    private AudioClip _soundClipNoBox;
+    [SerializeField]
+    private AudioClip _soundClipNoItems;
 
     public AudioSource Audio;
     public AudioClip SoundClipOpen;
@@ -25,11 +30,13 @@ public class ExitDoor : Interactable
         {
             Audio.PlayOneShot(SoundClipClosed);
             Speech.Instance.Text = "I should grab the box before I leave";
+            Speech.Instance.AudioClip = _soundClipNoBox;
         }
         else if (_box.Mementos.Length == 0)
         {
             Audio.PlayOneShot(SoundClipOpen);
             Speech.Instance.Text = "I should pack the box before I leave";
+            Speech.Instance.AudioClip = _soundClipNoItems;
         }
         else
         {
@@ -57,13 +64,30 @@ public class ExitDoor : Interactable
             _box.Mementos[0].AudioSource.clip = ending._endingAudio;
             _box.Mementos[0].AudioSource.time = time;
             _box.Mementos[0].AudioSource.Play();
-
         }
-        
+        foreach (var item in _box.Mementos)
+        {
+            item.AudioSource.DOFade(.25f, .5f);
+        }
 
         _outro.Ending = ending;
     }
 
+    IEnumerator FadeAudio(EndingObject ending)
+    {
+        if (ending._endingVO) {
+            foreach (var item in _box.Mementos)
+            {
+                item.AudioSource.DOFade(.15f, .5f);
+            }
+            yield return new WaitForSeconds(ending._endingVO.length);
+            foreach (var item in _box.Mementos)
+            {
+                item.AudioSource.DOFade(1, .5f);
+            }
+        }
+
+    }
     private bool EndingConditionsMet(EndingObject ending)
     {
         List<MementoObject> mementos = new List<MementoObject>();

@@ -7,5 +7,6 @@ public class EndingObject : ScriptableObject
     public MementoObject[] _conditions;
     public string _endingText;
     public AudioClip _endingAudio;
+    public AudioClip _endingVO;
     public Sprite _endingSprite;
 }
