@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 106ed78786192d643add0c7bf28ff4fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outlineObject: {fileID: 0}
   _outro: {fileID: 0}
   _endings:
   - {fileID: 11400000, guid: 33ccb9c563fd9e7489bfc4db12af7c60, type: 2}
@@ -268,7 +269,7 @@ GameObject:
   - component: {fileID: 513329232340441374}
   - component: {fileID: 6413843642715081310}
   - component: {fileID: 6537747240383360282}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
