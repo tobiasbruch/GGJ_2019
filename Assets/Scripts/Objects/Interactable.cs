@@ -10,12 +10,17 @@ public class Interactable : MonoBehaviour
     public UnityAction _onInteractClicked = delegate { };
     [SerializeField]
     public UnityAction _onCarryClicked = delegate { };
+    [SerializeField]
+    private GameObject _outlineObject;
 
     private QuickOutline _outline;
 
     protected virtual void Awake()
     {
-        _outline = gameObject.AddComponent<QuickOutline>();
+        if (_outlineObject == null)
+            _outlineObject = gameObject;
+
+        _outline = _outlineObject.AddComponent<QuickOutline>();
 
         _outline.OutlineMode = QuickOutline.Mode.OutlineAll;
         _outline.OutlineColor = Color.white;
