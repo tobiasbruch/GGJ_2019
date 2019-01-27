@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Memento : Carriable
@@ -11,16 +10,31 @@ public class Memento : Carriable
     public MementoObject MementoObject { get { return _mementoObject; } }
 
     private Coroutine _fadeOutRoutine;
-
+    
     protected override void Start()
     {
         base.Start();
+        AudioManagerStuff.i.RegisterMemento(this);
+    }
+
+    private void OnDestroy()
+    {
+        AudioManagerStuff.i.UnregisterMemento(this);
     }
 
     public override void OnInteractClick()
     {
         base.OnInteractClick();
-        PlayCuePreview();
+
+        if (_audioSource.isPlaying && _fadeOutRoutine != null)
+        {
+            StopCoroutine(_fadeOutRoutine);
+            _audioSource.Stop();
+        }
+        else
+            PlayCuePreview();
+
+        //AudioManagerStuff.i.StopAllMementosAudio();
     }
 
     protected override void OnIsCarriedChanged()
@@ -29,6 +43,7 @@ public class Memento : Carriable
 
         if (IsCarried)
         {
+            AudioManagerStuff.i.StopAllMementosAudio();
             Play();
         } else
         {
