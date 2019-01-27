@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6266e0ff0612aa945a1183ff1411ddad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outlineObject: {fileID: 7954231093562305505}
   Openable: 1
   Collider: {fileID: 1636528105954390494}
   DoorAnimator: {fileID: 679688800}
