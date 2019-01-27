@@ -44,6 +44,9 @@ public class Memento : Carriable
 
         if (IsCarried)
         {
+            GetComponentInChildren<ParticleSystem>().Stop();
+            GetComponentInChildren<ParticleSystem>().Clear();
+
             AudioManagerStuff.i.StopAllMementosAudio();
             Play();
         } else
