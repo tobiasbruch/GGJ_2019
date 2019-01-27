@@ -10,7 +10,19 @@ PrefabInstance:
     - target: {fileID: 6275940821283444373, guid: 31293317469251748bd463777c2b2391,
         type: 3}
       propertyPath: m_Name
-      value: BaseBallGlove
+      value: BaseBallGlove Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 833373050, guid: 31293317469251748bd463777c2b2391, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 01d4a97d39e7af3449fe5e1675e970aa, type: 3}
+    - target: {fileID: 833373050, guid: 31293317469251748bd463777c2b2391, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 833373050, guid: 31293317469251748bd463777c2b2391, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
         type: 3}
@@ -78,28 +90,94 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 3040249234781222299}
+    - target: {fileID: 6275940819451720063, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.325
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275940819451720063, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275940819451720063, guid: 31293317469251748bd463777c2b2391,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.09
+      objectReference: {fileID: 0}
     - target: {fileID: 6275940819451720001, guid: 31293317469251748bd463777c2b2391,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: acfe42b8543f5b4479d095671a1e480b, type: 2}
-    - target: {fileID: 833373050, guid: 31293317469251748bd463777c2b2391, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 01d4a97d39e7af3449fe5e1675e970aa, type: 3}
-    - target: {fileID: 833373050, guid: 31293317469251748bd463777c2b2391, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 833373050, guid: 31293317469251748bd463777c2b2391, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31293317469251748bd463777c2b2391, type: 3}
+--- !u!4 &9018946982191620214 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6275940821283444375, guid: 31293317469251748bd463777c2b2391,
+    type: 3}
+  m_PrefabInstance: {fileID: 3040249233952601825}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &3040249234781222299 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 833373050, guid: 31293317469251748bd463777c2b2391,
     type: 3}
   m_PrefabInstance: {fileID: 3040249233952601825}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5264295924090880062
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 9018946982191620214}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 703ce81ca82d32c4facddf8aeb1954b9, type: 3}
+      propertyPath: m_Name
+      value: Baseball Glove
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 703ce81ca82d32c4facddf8aeb1954b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 703ce81ca82d32c4facddf8aeb1954b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 703ce81ca82d32c4facddf8aeb1954b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 703ce81ca82d32c4facddf8aeb1954b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 703ce81ca82d32c4facddf8aeb1954b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 703ce81ca82d32c4facddf8aeb1954b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 703ce81ca82d32c4facddf8aeb1954b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 703ce81ca82d32c4facddf8aeb1954b9, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 703ce81ca82d32c4facddf8aeb1954b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 703ce81ca82d32c4facddf8aeb1954b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 703ce81ca82d32c4facddf8aeb1954b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 703ce81ca82d32c4facddf8aeb1954b9, type: 3}
