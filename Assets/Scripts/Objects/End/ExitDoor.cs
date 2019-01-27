@@ -14,15 +14,21 @@ public class ExitDoor : Interactable
     [SerializeField]
     private Box _box;
 
+    public AudioSource Audio;
+    public AudioClip SoundClipOpen;
+    public AudioClip SoundClipClosed;
+
     public override void OnInteractClick()
     {
         base.OnInteractClick();
         if (!_box.IsCarried)
         {
+            Audio.PlayOneShot(SoundClipClosed);
             Speech.Instance.Text = "I should grab the box before I leave";
         }
         else if (_box.Mementos.Length == 0)
         {
+            Audio.PlayOneShot(SoundClipOpen);
             Speech.Instance.Text = "I should pack the box before I leave";
         }
         else
