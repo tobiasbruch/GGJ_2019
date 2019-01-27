@@ -37,10 +37,16 @@ public class Intro : MonoBehaviour
         StartCoroutine(IntroRoutine());
     }
 
-    IEnumerator IntroRoutine()
+    public void StartGame()
     {
+        _animator.SetInteger("IntroState", 3);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        _player.enabled = true;
+    }
+
+    IEnumerator IntroRoutine()
+    {
         WaitForEndOfFrame wait = new WaitForEndOfFrame();
         yield return wait;
         _animator.SetInteger("IntroState", 1);
@@ -64,11 +70,6 @@ public class Intro : MonoBehaviour
             _audioSource.clip = _narration;
             _audioSource.loop = false;
             _audioSource.Play();
-        }
-
-        yield return new WaitWhile(() => { return !Input.GetMouseButtonDown(0); });
-
-        _animator.SetInteger("IntroState", 3);
-        _player.enabled = true;
+        }        
     }
 }
