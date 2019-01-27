@@ -14,20 +14,20 @@ public class Intro : MonoBehaviour
     private AudioClip _backgroundNoises;
     [SerializeField]
     private AudioClip _narration;
-    [SerializeField]
-    private FirstPersonController _player;
 
     private Animator _animator;
 
     private void Awake()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        _player.enabled = false;
+
     }
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        FirstPersonController.Instance.enabled = false;
+
         _animator = GetComponent<Animator>();
         _animator.SetInteger("IntroState", 0);
     }
@@ -42,7 +42,7 @@ public class Intro : MonoBehaviour
         _animator.SetInteger("IntroState", 3);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        _player.enabled = true;
+        FirstPersonController.Instance.enabled = true;
     }
 
     IEnumerator IntroRoutine()
