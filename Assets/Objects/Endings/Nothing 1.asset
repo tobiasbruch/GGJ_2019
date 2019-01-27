@@ -16,4 +16,5 @@ MonoBehaviour:
   _endingText: "I guess I don\u2019t remember much about my dad. I was sure there
     would be some stuff here to jog my memory but\u2026 oh well. "
   _endingAudio: {fileID: 0}
+  _endingVO: {fileID: 8300000, guid: 12ea46e580d736041bab49f1deb4fd71, type: 3}
   _endingSprite: {fileID: 0}

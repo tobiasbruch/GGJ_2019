@@ -21,4 +21,5 @@ MonoBehaviour:
     and I quickly got my inhaler. Pretty much ruined him. All he wanted was to play
     with his kid. '
   _endingAudio: {fileID: 8300000, guid: 425d733dd41a9d5478e7dafd1f55aa5f, type: 3}
+  _endingVO: {fileID: 8300000, guid: 6231159708e0e214f90749aa98ccf391, type: 3}
   _endingSprite: {fileID: 0}

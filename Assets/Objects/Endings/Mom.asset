@@ -21,4 +21,5 @@ MonoBehaviour:
     look at him weird every time. \u201CThen and there\u201D. He knew she was the
     one."
   _endingAudio: {fileID: 0}
+  _endingVO: {fileID: 8300000, guid: 553aef182037bc7418183dee2317abbc, type: 3}
   _endingSprite: {fileID: 0}

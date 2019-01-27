@@ -21,4 +21,5 @@ MonoBehaviour:
     Yeah it was just about playing, doing something together. I can still remember
     the excitement when he saw the ad in the paper. I guess we did find something. "
   _endingAudio: {fileID: 8300000, guid: f4f2d3ed4fcbb9f459b0ebe6d3eaf10d, type: 3}
+  _endingVO: {fileID: 8300000, guid: d4721bf1443aa6f48ae42e2ca8bdac45, type: 3}
   _endingSprite: {fileID: 0}

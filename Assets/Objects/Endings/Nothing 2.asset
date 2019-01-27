@@ -16,4 +16,5 @@ MonoBehaviour:
   _endingText: "Meh. Nothing interesting, just a bunch of random junk. I may have
     missed something but\u2026 nah... "
   _endingAudio: {fileID: 0}
+  _endingVO: {fileID: 8300000, guid: e36f103f9a1a4e140a53bc66852669f6, type: 3}
   _endingSprite: {fileID: 0}

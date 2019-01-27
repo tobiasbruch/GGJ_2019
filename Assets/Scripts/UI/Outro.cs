@@ -9,6 +9,8 @@ public class Outro : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI _text;
+    [SerializeField]
+    private AudioSource _voiceOver;
 
     public EndingObject Ending
     {
@@ -20,6 +22,11 @@ public class Outro : MonoBehaviour
             FirstPersonController.Instance.enabled = false;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+
+            _voiceOver.Stop();
+            _voiceOver.clip = value._endingVO;
+            _voiceOver.loop = false;
+            _voiceOver.Play();
         }
     }
 

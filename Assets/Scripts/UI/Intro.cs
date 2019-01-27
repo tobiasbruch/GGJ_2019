@@ -16,6 +16,8 @@ public class Intro : MonoBehaviour
     private AudioClip _narration;
     [SerializeField]
     private AudioSource _ambientMusic;
+    [SerializeField]
+    private AudioSource _voiceOver;
 
     private Animator _animator;
 
@@ -72,9 +74,10 @@ public class Intro : MonoBehaviour
         if (_narration)
         {
             _audioSource.Stop();
-            _audioSource.clip = _narration;
-            _audioSource.loop = false;
-            _audioSource.Play();
+            _voiceOver.Stop();
+            _voiceOver.clip = _narration;
+            _voiceOver.loop = false;
+            _voiceOver.Play();
         }        
     }
 }
