@@ -9,10 +9,24 @@ public class OpenDoor : Interactable
     public Animator DoorAnimator;
     public AudioSource DoorSound;
 
+    private bool _played;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        _played = false;
+    }
+
     public override void OnInteractClick()
     {
         base.OnInteractClick();
-       
+
+        if (_played)
+        {
+            return;
+        }
+
+        _played = true;
         DoorSound.Play();
 
         if (!Openable)
