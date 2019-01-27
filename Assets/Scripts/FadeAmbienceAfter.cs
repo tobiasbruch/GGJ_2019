@@ -7,7 +7,7 @@ public class FadeAmbienceAfter : MonoBehaviour
     [SerializeField]
     private AudioSource _audioSource;
 
-    private void Start()
+    public void Fade()
     {
         StartCoroutine(StopAfter());
     }

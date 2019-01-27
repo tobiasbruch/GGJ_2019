@@ -69,6 +69,7 @@ public class Intro : MonoBehaviour
 
         _animator.SetInteger("IntroState", 2);
         _ambientMusic.Play();
+        _ambientMusic.GetComponent<FadeAmbienceAfter>().Fade();
         yield return wait;
 
         if (_narration)
