@@ -9,4 +9,6 @@ public class EndingObject : ScriptableObject
     public AudioClip _endingAudio;
     public AudioClip _endingVO;
     public Sprite _endingSprite;
+
+    public bool RelevantEnding = false;
 }

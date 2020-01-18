@@ -13,6 +13,10 @@ public class Interactable : MonoBehaviour
     [SerializeField]
     private GameObject _outlineObject;
 
+
+    public UnityEvent OnLookAt;
+    public UnityEvent OnInteract;
+
     private QuickOutline _outline;
 
     protected virtual void Awake()
@@ -37,11 +41,13 @@ public class Interactable : MonoBehaviour
     public virtual void OnInteractClick()
     {
         _onInteractClicked.Invoke();
+        OnInteract.Invoke();
     }
 
     public void OnPointerEnter()
     {
         _outline.enabled = true;
+        OnLookAt.Invoke();
 
     }
 

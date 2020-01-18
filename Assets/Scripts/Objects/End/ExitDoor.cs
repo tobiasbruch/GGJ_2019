@@ -23,6 +23,10 @@ public class ExitDoor : Interactable
     public AudioClip SoundClipOpen;
     public AudioClip SoundClipClosed;
 
+    public EndingObject[] GetEndings()
+    {
+        return _endings;
+    }
     public override void OnInteractClick()
     {
         base.OnInteractClick();
@@ -66,7 +70,7 @@ public class ExitDoor : Interactable
             _box.Mementos[0].AudioSource.Play();
         }
         StartCoroutine(FadeAudio(ending));
-
+        PlayerPrefs.SetInt(ending.name,1);
         _outro.Ending = ending;
     }
 
